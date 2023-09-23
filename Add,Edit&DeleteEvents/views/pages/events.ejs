@@ -1,0 +1,35 @@
+<div class="bg-dark rounded text-light text-center
+     p-3 mx-auto w-50 my-5 container">
+    <h2> Events List </h2>
+</div>
+
+<div class="events-list my-5 text-center container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <% if (events.length > 0) { %>
+            <tbody>
+                <% for(let event of events) { %>
+                    <tr>
+                        <td><%= event._id %></td>
+                        <td><%= event.title %></td>
+                        <td><%= event.price %></td>
+                        <td><%= event.description %></td>
+                        <td>
+                            <a href="/events/<%= event._id %>" class="btn btn-sm mx-1 btn-primary">Show</a>
+                            <a href="/edit/<%= event._id %>" class="btn btn-sm mx-1 btn-success">Edit</a>
+                            <a href="/events/<%= event._id %>/delete" class="btn btn-sm mx-1 btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        <% } %>
+    </table>
+</div>

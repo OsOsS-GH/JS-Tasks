@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events App</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+        <div class="container">
+          <a class="navbar-brand" href="/">Events APP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/events">Events</a>
+              <a class="nav-link" href="/create">Create Event</a>
+              <a class="nav-link" href="/contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="main-content">
+        <%- body %>
+      </main>
+
+
+      <!-- Footer -->
+    <footer class="bg-light p-3 mt-5 fs-5">
+        <div class="container">
+            Copyright &copy; 2023 All rights Reserved
+        <br> Made with <span class="text-success">&hearts; by Backend NodeJS Mans</span>
+        </div>
+    </footer>
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
